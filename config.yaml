@@ -1,0 +1,17 @@
+# This file defines charm config options, and populates the Configure tab on Charmhub.
+# If your charm does not require configuration options, delete this file entirely.
+#
+# See https://juju.is/docs/config for guidance.
+
+options:
+  account:
+    type: string
+    description: |
+      ID of your ARMO Cloud for Kubescape account.
+
+  clusterName:
+    type: string
+    description: |
+      Display name for the cluster.
+
+      This name will be displayed in the ARMO Cloud for Kubescape.
