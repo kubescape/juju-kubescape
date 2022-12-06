@@ -3,10 +3,17 @@
 To play around with the Kubescape Charm, you would need:
 
 - A running Kubernetes cluster. Minikube, MicroK8s or anything else will do for local.
-- A working Juju OLM installation. You can find the installation instructions [here](https://juju.is/docs/olm/get-started-with-juju#heading--install-the-juju-cli-client).
+- A working Juju OLM installation.
+A simple Snap install will do, as demonstrated later.
+However, if you want more details, you can find the installation instructions [here](https://juju.is/docs/olm/get-started-with-juju#heading--install-the-juju-cli-client).
 
-When you have the prerequisites installed, you have to configure an appropriate Juju controller.
-Assuming you’re trying out the Charm out on Minikube, make sure your cluster is running:
+Start out by installing the Juju OLM:
+```
+sudo snap install juju --classic
+```
+
+When you have the Juju OLM installed, you have to configure an appropriate Juju controller for your cloud.
+In our case, the “cloud” is a local Minikube cluster, so make sure your cluster is running:
 
 ```
 minikube start
