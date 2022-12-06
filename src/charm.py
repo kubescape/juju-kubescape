@@ -55,6 +55,9 @@ class TemplateValues(pyd.BaseModel):
     account: StrUUID
     namespace: str
 
+    class Config:
+        extra = pyd.Extra.forbid
+
 
 class KubescapeCharmedCharm(CharmBase):
     """Charm the service."""
