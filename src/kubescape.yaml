@@ -37,7 +37,7 @@ data:
       "kubevulnURL": "kubevuln:8080",
       "kubescapeURL": "kubescape:8080",
       "triggerNewImageScan": "false",
-      "accountID": "{{ accountID }}",
+      "accountID": "{{ account }}",
       "clusterName": "{{ clusterName }}", 
       "backendOpenAPI": "https://api.armosec.io/api",
       "eventReceiverRestURL": "https://report.armo.cloud",
@@ -201,7 +201,7 @@ metadata:
 data:
   config.json: |
     {
-      "accountID": "{{ accountID }}",
+      "accountID": "{{ account }}",
       "clusterName": "{{ clusterName }}",
       "clientID": "",
       "secretKey": ""
@@ -984,7 +984,7 @@ spec:
       automountServiceAccountToken: true
 ---
 # Source: kubescape-cloud-operator/templates/kubescape-scheduler-cronjob.yaml
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: kubescape-scheduler
@@ -1029,7 +1029,7 @@ spec:
               name: kubescape-scheduler
 ---
 # Source: kubescape-cloud-operator/templates/kubevuln-scheduler-cronjob.yaml
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: kubevuln-scheduler
