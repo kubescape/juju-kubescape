@@ -3,21 +3,30 @@
 
 # The charm package name, no spaces (required)
 # See https://juju.is/docs/sdk/naming#heading--naming-charms for guidance.
-name: kubescape-charmed
+name: kubescape
  
 # The following metadata are human-readable and will be published prominently on Charmhub.
 
 # (Recommended)
-display-name: Charm Template
+display-name: Kubescape
 
 # (Required)
-summary: A very short one-line summary of the charm.
+summary: |
+  This charm deploys Kubescape to enhance the security of a Kubernetes cluster.
 
 description: |
-  A single sentence that says what the charm is, concisely and memorably.
+  This charm installs the Kubescape Operator, a solution that enhances the
+  security of Kubernetes clusters by monitoring them for issues and helping fix
+  them.
 
-  A paragraph of one to three short sentences, that describe what the charm does.
+  Kubescape is a K8s open-source tool providing a Kubernetes single pane of
+  glass, including risk analysis, security compliance, RBAC visualizer, and
+  image vulnerability scanning. Kubescape scans K8s clusters, YAML files, and
+  HELM charts, detecting misconfigurations according to multiple frameworks
+  (such as the NSA-CISA, MITRE ATT&CK®), software vulnerabilities, and RBAC
+  (role-based-access-control) violations at early stages of the CI/CD pipeline,
+  calculates risk score instantly and shows risk trends over time.
 
-  A third paragraph that explains what need the charm meets.
-
-  Finally, a paragraph that describes whom the charm is useful for.
+  This charm will help DevSecOps, Security Engineers and CISOs review and
+  constantly monitor the security posture of their Kubernetes clusters and help
+  fix the found issues by offering remediation where possible.
