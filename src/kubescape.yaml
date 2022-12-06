@@ -37,7 +37,7 @@ data:
       "kubevulnURL": "kubevuln:8080",
       "kubescapeURL": "kubescape:8080",
       "triggerNewImageScan": "false",
-      "accountID": "{{ accountID }}",
+      "accountID": "{{ account }}",
       "clusterName": "{{ clusterName }}", 
       "backendOpenAPI": "https://api.armosec.io/api",
       "eventReceiverRestURL": "https://report.armo.cloud",
@@ -201,7 +201,7 @@ metadata:
 data:
   config.json: |
     {
-      "accountID": "{{ accountID }}",
+      "accountID": "{{ account }}",
       "clusterName": "{{ clusterName }}",
       "clientID": "",
       "secretKey": ""
