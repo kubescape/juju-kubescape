@@ -19,4 +19,4 @@ juju bootstrap minikube
 ```
 
 Now your Juju CLI should be ready to work with your running cluster.
-So to deploy the Kubescape Charm, it’s time to create a model and deploy the Charm by following the steps in the [README][../README.md].
+So to deploy the Kubescape Charm, it’s time to create a model and deploy the Charm by following the steps in the [README](../README.md).
