@@ -10,6 +10,14 @@ name: kubescape
 # (Recommended)
 display-name: Kubescape
 
+website: https://armosec.io/
+
+source: https://github.com/vladklokun/ks-charmed
+issues: https://github.com/vladklokun/ks-charmed/issues
+
+assumes:
+  - k8s-api
+
 # (Required)
 summary: |
   This charm deploys Kubescape to enhance the security of a Kubernetes cluster.
