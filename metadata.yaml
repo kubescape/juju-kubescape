@@ -12,29 +12,30 @@ display-name: Kubescape
 
 website: https://armosec.io/
 
-source: https://github.com/vladklokun/ks-charmed
-issues: https://github.com/vladklokun/ks-charmed/issues
+source: https://github.com/kubescape/juju-kubescape
+issues: https://github.com/kubescape/juju-kubescape/issues
 
 assumes:
   - k8s-api
 
 # (Required)
 summary: |
-  This charm deploys Kubescape to enhance the security of a Kubernetes cluster.
+  Deprecated Kubescape Juju charm. Use the maintained Helm installation.
 
 description: |
-  This charm installs the Kubescape Operator, a solution that enhances the
-  security of Kubernetes clusters by monitoring them for issues and helping fix
-  them.
+  This Juju charm is deprecated and is being retired. Do not use it for new
+  deployments. This retirement applies only to the Juju charm, not to Kubescape
+  or its Operator.
 
-  Kubescape is a K8s open-source tool providing a Kubernetes single pane of
-  glass, including risk analysis, security compliance, RBAC visualizer, and
-  image vulnerability scanning. Kubescape scans K8s clusters, YAML files, and
-  HELM charts, detecting misconfigurations according to multiple frameworks
-  (such as the NSA-CISA, MITRE ATT&CK®), software vulnerabilities, and RBAC
-  (role-based-access-control) violations at early stages of the CI/CD pipeline,
-  calculates risk score instantly and shows risk trends over time.
+  Deprecation was announced on 26 October 2026. The migration window ends on
+  25 November 2026, after which the repository is planned to be archived.
 
-  This charm will help DevSecOps, Security Engineers and CISOs review and
-  constantly monitor the security posture of their Kubernetes clusters and help
-  fix the found issues by offering remediation where possible.
+  Existing users should plan a migration to the maintained Kubescape Operator
+  installation using Helm or Argo CD:
+  https://kubescape.io/docs/install-operator/
+
+  The published charm contains old dependencies and Kubescape components.
+  Dependency security advisories remain unresolved. Closing Charmhub channels
+  does not patch or remove existing installations. See the repository for
+  migration guidance:
+  https://github.com/kubescape/juju-kubescape

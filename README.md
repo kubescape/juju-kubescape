@@ -1,22 +1,31 @@
-# Kubescape Operator
+# Kubescape Juju charm — deprecated
 
-The Kubescape charm deploys the Kubescape in-cluster components on Kubernetes to enhance the security of a running cluster.
+This Juju charm is deprecated and is being retired. Do not use it for new
+deployments. This retirement applies only to the Juju charm, not to the
+Kubescape project or its Operator.
 
-## Usage
+Deprecation was announced on **26 October 2026**. The migration window ends on
+**25 November 2026**, after which this repository is planned to be archived.
+New deployments should use the maintained installation method below.
 
-Before you deploy Kubescape, please:
+Use the maintained [Kubescape Operator installation instructions](https://kubescape.io/docs/install-operator/)
+to deploy with Helm or Argo CD. For on-demand scans, see the
+[Kubescape CLI installation instructions](https://kubescape.io/docs/install-cli/).
 
-- Make sure you have access to a Charmed Kubernetes cluster you want to secure.
+## Existing deployments
 
-- Sign up for an account at ARMO Cloud for Kubescape (https://armosec.io/).
-Kubescape will use it to give you insight into your cluster’s security.
+The published charm contains old dependencies and Kubescape components.
+Dependency security advisories remain unresolved. Deprecation, closing Charmhub
+channels, and archiving this repository do not patch or remove existing
+installations.
 
-- Copy your account ID.
+Plan a migration to the maintained installation method. Record your existing
+configuration and cloud connection settings, inventory the cluster resources
+created by the charm, and test the replacement before removing the old
+deployment. The Helm installation instructions describe a new installation;
+they are not an automated migration from this charm.
 
-After that, you may deploy the Kubescape charm via Juju by running the following command:
-
-```
-juju add-model kubescape
-juju deploy --trust kubescape --config clusterName=`kubectl config current-context` --config account=<YOUR_CLOUD_ACCOUNT_ID>
-```
+If you currently use this charm, report your migration needs through the
+[repository issue tracker](https://github.com/kubescape/juju-kubescape/issues)
+before the repository is archived. Do not include credentials or other secrets.
 
